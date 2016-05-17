@@ -5,7 +5,7 @@ Home: http://www.scitools.org.uk/iris
 
 Package license: GNU Lesser General Public License
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Units of measure as required by the Climate and Forecast (CF) metadata conventions.
 
@@ -69,9 +69,15 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cf_units-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/cf_units-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/cf_units-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cf_units-feedstock) 
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cf_units-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cf_units-feedstock/branch/master)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cf-units-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cf-units-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cf_units/badges/version.svg)](https://anaconda.org/conda-forge/cf_units)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cf_units/badges/downloads.svg)](https://anaconda.org/conda-forge/cf_units)
 
 
 Updating cf_units-feedstock
