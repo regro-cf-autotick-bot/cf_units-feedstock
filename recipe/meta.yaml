@@ -7,7 +7,7 @@ package:
 source:
     fn: cf_units-{{ version }}.tar.gz
     url: https://github.com/SciTools/cf_units/archive/v{{ version }}.tar.gz
-    sha256: a535d0418facc7c38d201312811c54d63b578f2d35c3818395b3427468d6b791
+    sha256: 92981e0aa1cb97cf6b737335910c8be88dc095e879ca8405b26f61c3e2d02e6a
 
 build:
     number: 0
