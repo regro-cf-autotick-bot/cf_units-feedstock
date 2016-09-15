@@ -1,4 +1,4 @@
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
     name: cf_units
@@ -7,7 +7,7 @@ package:
 source:
     fn: cf_units-{{ version }}.tar.gz
     url: https://github.com/SciTools/cf_units/archive/v{{ version }}.tar.gz
-    sha256: 92981e0aa1cb97cf6b737335910c8be88dc095e879ca8405b26f61c3e2d02e6a
+    sha256: 6b277069f29c7dd1b752425ac6dd19ebf52314872779f7f8c9370ba1d6e4f406
 
 build:
     number: 0
@@ -30,7 +30,7 @@ test:
 about:
     home: http://www.scitools.org.uk/iris
     license: GNU Lesser General Public License
-    summary: Units of measure as required by the Climate and Forecast (CF) metadata conventions.
+    summary: 'Units of measure as required by the Climate and Forecast (CF) metadata conventions.'
 
 extra:
     recipe-maintainers:
