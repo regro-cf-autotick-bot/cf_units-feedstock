@@ -3,7 +3,7 @@ About cf_units
 
 Home: http://www.scitools.org.uk/iris
 
-Package license: GNU Lesser General Public License
+Package license: LGPL-3.0
 
 Feedstock license: BSD 3-Clause
 
