@@ -1,15 +1,15 @@
-{% set version = "1.1.3" %}
+{% set version = "1.2.0" %}
 
 package:
   name: cf_units
   version: {{ version }}
 
 source:
-  url: https://github.com/SciTools/cf_units/archive/v{{ version }}.tar.gz
-  sha256: 3705ea3bb083ce59d0c113c25221c91e7d0ce286e2996c209942adaf93c3bcdd
+  url: https://pypi.io/packages/source/c/cf_units/cf_units-{{ version }}.tar.gz
+  sha256: abdd2a0937b958322f7ff7ec6866e80f08603c60aa06cef5766b6512c750028a
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
