@@ -18,11 +18,13 @@ requirements:
     - pip
     - cython
     - numpy 1.11.*
-    - udunits2 >=2.2.23
+    - udunits2 2.2.25  # [win and py2k]
+    - udunits2 >=2.2.26,<2.3  # [not (win and py2k)]
   run:
     - python
     - numpy >=1.11
-    - udunits2 >=2.2.23
+    - udunits2 2.2.25  # [win and py2k]
+    - udunits2 >=2.2.26,<2.3  # [not (win and py2k)]
     - cftime
     - six
 
