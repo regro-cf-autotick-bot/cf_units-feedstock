@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: cf_units
@@ -6,25 +6,40 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cf_units/cf_units-{{ version }}.tar.gz
-  sha256: abdd2a0937b958322f7ff7ec6866e80f08603c60aa06cef5766b6512c750028a
+  sha256: aeb4978c11518bcb2516c1cf7beb053d1be0cd8e2349a07ad78094f63a2837f4
 
 build:
   number: 0
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
+    - cython
+    - numpy 1.11.*
+    - udunits2 2.2.25  # [win and py2k]
+    - udunits2 >=2.2.26,<2.3  # [not (win and py2k)]
   run:
     - python
+    - numpy >=1.11
+    - udunits2 2.2.25  # [win and py2k]
+    - udunits2 >=2.2.26,<2.3  # [not (win and py2k)]
+    - cftime
     - six
-    - udunits2 >=2.2.23
-    - netcdf4
-    - numpy
 
 test:
+  source_files:
+    - cf_units/tests
+  requires:
+    - pytest
+    - pep8
   imports:
     - cf_units
+  commands:
+    - cd cf_units && python -m pytest tests
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.scitools.org.uk/iris
