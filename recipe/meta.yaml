@@ -9,19 +9,21 @@ source:
   sha256: aeb4978c11518bcb2516c1cf7beb053d1be0cd8e2349a07ad78094f63a2837f4
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - pip
     - cython
-    - numpy 1.11.*
+    - numpy
     - udunits2 2.2.25  # [win and py2k]
     - udunits2 >=2.2.26,<2.3  # [not (win and py2k)]
   run:
     - python
-    - numpy >=1.11
+    - {{ pin_compatible('numpy') }}
     - udunits2 2.2.25  # [win and py2k]
     - udunits2 >=2.2.26,<2.3  # [not (win and py2k)]
     - cftime
