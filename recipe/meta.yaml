@@ -31,7 +31,7 @@ requirements:
 
 test:
   source_files:
-    - cf-units/tests
+    - cf_units/tests
   requires:
     - pytest
     - pep8
