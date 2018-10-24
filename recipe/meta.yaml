@@ -1,15 +1,15 @@
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
-  name: cf_units
+  name: cf-units
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/cf_units/cf_units-{{ version }}.tar.gz
-  sha256: aeb4978c11518bcb2516c1cf7beb053d1be0cd8e2349a07ad78094f63a2837f4
+  url: https://pypi.io/packages/source/c/cf-units/cf-units-{{ version }}.tar.gz
+  sha256: 26b18aa0fb8c28c526bac48d9effb648c1d1542eb8a47032455f0c5aa862ab8c
 
 build:
-  number: 1002
+  number: 1000
 
 requirements:
   build:
@@ -37,9 +37,9 @@ test:
     - pep8
   imports:
     - cf_units
-  commands:
+  # commands:
     # re-enable the tests when
-    # https://github.com/SciTools/cf-units/pull/116 is merged.
+    # https://github.com/SciTools/cf-units/pull/116 is merged and released.
     # - cd cf_units && python -m pytest tests
 
 about:
