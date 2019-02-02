@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.1.1" %}
 
 package:
   name: cf-units
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cf-units/cf-units-{{ version }}.tar.gz
-  sha256: 26b18aa0fb8c28c526bac48d9effb648c1d1542eb8a47032455f0c5aa862ab8c
+  sha256: fa0ef8efd84546e61088aa23e76ebbaf7043167dc3a7f35f34549c234b543530
 
 build:
   number: 1000
@@ -17,16 +17,16 @@ requirements:
   host:
     - python
     - pip
-    - cython
     - numpy
-    - udunits2 2.2.25  # [win and py2k]
-    - udunits2 >=2.2.26,<2.3  # [not (win and py2k)]
+    - udunits2
+    # It isn't clear that this really is needed, but it is listed in setup.py.
+    - pytest-runner
   run:
+    - {{ pin_compatible('udunits2', max_pin='x.x') }}
     - python
-    - {{ pin_compatible('numpy') }}
-    - udunits2 2.2.25  # [win and py2k]
-    - udunits2 >=2.2.26,<2.3  # [not (win and py2k)]
     - cftime
+    - {{ pin_compatible('numpy') }}
+    - antlr-python-runtime 4.7.2.*  # [py3k]
     - six
 
 test:
@@ -37,14 +37,12 @@ test:
     - pep8
   imports:
     - cf_units
-  # commands:
-    # re-enable the tests when
-    # https://github.com/SciTools/cf-units/pull/116 is merged and released.
-    # - cd cf_units && python -m pytest tests
+  commands:
+    - cd cf_units && python -m pytest tests
 
 about:
-  home: http://www.scitools.org.uk/iris
-  license: LGPL-3.0
+  home: https://scitools.org.uk/cf-units/docs/latest/
+  license: LGPLv3
   license_file: COPYING.LESSER
   summary: 'Units of measure as required by the Climate and Forecast (CF) metadata conventions.'
 
