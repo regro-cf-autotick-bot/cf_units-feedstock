@@ -30,19 +30,16 @@ requirements:
     - six
 
 test:
-  source_files:
-    - cf_units/tests
   requires:
     - pytest
-    - pep8
   imports:
     - cf_units
   commands:
-    - cd cf_units && python -m pytest tests
+    - pytest --pyargs cf_units
 
 about:
   home: https://scitools.org.uk/cf-units/docs/latest/
-  license: LGPLv3
+  license: LGPL-3.0
   license_file: COPYING.LESSER
   summary: 'Units of measure as required by the Climate and Forecast (CF) metadata conventions.'
 
