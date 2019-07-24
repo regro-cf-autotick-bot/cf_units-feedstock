@@ -9,7 +9,7 @@ source:
   sha256: 47cc228e9b3d09fb47765584289af1ac340b05c78367f1012d77524f91e0e178
 
 build:
-  number: 1000
+  number: 0
   skip: True  # [win and py2k]
 
 requirements:
