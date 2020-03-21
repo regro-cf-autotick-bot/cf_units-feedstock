@@ -1,4 +1,4 @@
-{% set version = "2.1.3" %}
+{% set version = "2.1.4" %}
 
 package:
   name: cf-units
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cf-units/cf-units-{{ version }}.tar.gz
-  sha256: dbe11072fd4aedef4c84ebd94514837985872ec9e5c5fc7517ffb35b310778d7
+  sha256: 25f81ad994af30713ee8f5ef18ffddd83c6ec1ac308e1bd89d45de9d2e0f1c31
 
 build:
   number: 0
-  skip: True  # [win and py2k]
+  skip: true  # [win and py2k]
 
 requirements:
   build:
@@ -45,7 +45,7 @@ about:
   home: https://scitools.org.uk/cf-units/docs/latest/
   license: LGPL-3.0
   license_file: COPYING.LESSER
-  summary: 'Units of measure as required by the Climate and Forecast (CF) metadata conventions.'
+  summary: Units of measure as required by the Climate and Forecast (CF) metadata conventions.
 
 extra:
   recipe-maintainers:
