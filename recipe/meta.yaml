@@ -19,6 +19,7 @@ requirements:
     - python
     - pip
     - numpy
+    - cython
     - udunits2
     # It isn't clear that this really is needed, but it is listed in setup.py.
     - pytest-runner
@@ -33,9 +34,11 @@ requirements:
 test:
   requires:
     - pytest
+    - pip
   imports:
     - cf_units
   commands:
+    - pip check
     - pytest --pyargs cf_units                                   # [not (win and py2k)]
       # On win py2 we are getting an unexpected test failure. See also
       # https://github.com/SciTools/cf-units/issues/148.
