@@ -10,7 +10,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py2k]
 
 requirements:
   build:
@@ -28,8 +27,7 @@ requirements:
     - python
     - cftime
     - {{ pin_compatible('numpy') }}
-    - antlr-python-runtime 4.7.2.*  # [py3k]
-    - six
+    - antlr-python-runtime 4.7.2.*
 
 test:
   requires:
@@ -39,10 +37,7 @@ test:
     - cf_units
   commands:
     - pip check
-    - pytest --pyargs cf_units                                   # [not (win and py2k)]
-      # On win py2 we are getting an unexpected test failure. See also
-      # https://github.com/SciTools/cf-units/issues/148.
-    - pytest --pyargs cf_units -k="-test_read_xml_invalid_path"  # [win and py2k]
+    - pytest --pyargs cf_units
 
 about:
   home: https://scitools.org.uk/cf-units/docs/latest/
@@ -55,3 +50,4 @@ extra:
     - bjlittle
     - ocefpaf
     - pelson
+    - trexfeathers
