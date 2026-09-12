@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/cf_units/cf_units-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/cf_units/cf_units-{{ version }}.tar.gz
   sha256: 84339f582994ae32ca5c472075c1e603a89f6c6f5a96cc1031bb5da700a14f3a
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<311]
 
 requirements:
